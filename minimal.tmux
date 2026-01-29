@@ -2,7 +2,8 @@
 
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-bg="#d7d787"
+bg="#b4befe"
+black="#1e1e2e"
 
 spotify_listener=false
 
@@ -31,11 +32,11 @@ tmux set-option -g status-style bg=default,fg=default
 tmux set-option -g status-justify ${justify}
 
 tmux set-option -g status-left "${status_left_formated}"
-tmux set-option -g status-left-length "${status_right_length}"
+tmux set-option -g status-left-length "${status_left_length}"
 tmux set-option -g status-right "${status_right_formated}"
 tmux set-option -g status-right-length "${status_right_length}"
 
 tmux set-option -g set-titles-string "${title}"
 
 tmux set-option -g window-status-format " ${window_status_format}#{?window_zoomed_flag,${expanded_icon}, }"
-tmux set-option -g window-status-current-format "#[bg=${bg},fg=#000000] ${window_status_format}#{?window_zoomed_flag,${expanded_icon}, }"
+tmux set-option -g window-status-current-format "#[bg=${bg},fg=${black}] ${window_status_format}#{?window_zoomed_flag,${expanded_icon}, }"
