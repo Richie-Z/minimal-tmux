@@ -4,6 +4,7 @@ CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 bg="#b4befe"
 black="#1e1e2e"
+fg="#313244"
 
 spotify_listener=false
 
@@ -26,6 +27,9 @@ window_status_format=' #I:#W '
 expanded_icon="󰊓 "
 
 title="#S:#W"
+
+tmux set-option -g pane-active-border-style bg=default,fg=${bg}
+tmux set-option -g pane-border-style fg=${fg}
 
 tmux set-option -g status-position ${status}
 tmux set-option -g status-style bg=default,fg=default
