@@ -15,7 +15,7 @@ status_left=" #S "
 status_left_formated="#[bg=default,fg=default,bold]#{?client_prefix,,${status_left}}#[bg=${bg},fg=black,bold]#{?client_prefix,${status_left},}#[bg=default,fg=default,bold]"
 status_left_length=25
 
-status_right="#($CURRENT_DIR/scripts/tmux-cpu/scripts/cpu_percentage.sh) | Richie-Z "
+status_right="#($CURRENT_DIR/scripts/tmux-cpu/scripts/cpu_percentage.sh) | $(hostname) "
 if [ "$spotify_listener" = true ]; then
   status_right="#($CURRENT_DIR/scripts/tmux-cpu/scripts/cpu_percentage.sh) | #($CURRENT_DIR/scripts/music.sh)"
 fi
